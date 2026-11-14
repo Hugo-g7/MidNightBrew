@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midnight Brew Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a href="#inicio" class="logo">
+        <span class="logo-icone">☕</span>
+        <span class="logo-texto">
+          <small><b>MIDNIGHT</b> COFFEE SHOP</small>
+          <strong>brew</strong>
+        </span>
+      </a>
+
+      <form class="busca-topo" id="formBuscaTopo">
+        <span>🔍</span>
+        <input type="text" id="campoBuscaTopo" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <nav class="menu">
+        <a href="#inicio" class="menu-link ativo">⌂ Início</a>
+        <a href="produtos.html" class="menu-link">Produtos</a>
+        <a href="pedidos.html" class="menu-link">Pedidos <span class="bolinha azul">2</span></a>
+        <a href="carrinho.html" class="menu-link">🛒 <span class="bolinha amarela" id="contadorCarrinho">4</span> Carrinho</a>
+        <a href="#perfil" class="menu-link">Perfil</a>
+        <a href="#login" class="botao-borda" id="botaoLogin">Login</a>
+        <a href="#cadastro" class="botao-azul" id="botaoCadastro">Cadastre-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+
+    <!-- DESTAQUE PRINCIPAL -->
+    <section class="destaque" id="inicio">
+      <div class="destaque-texto">
+        <span class="selo-topo"><i></i> Torrefação Noturna Artesanal • Delivery 24 Horas</span>
+
+        <h1>O combustível perfeito para suas <span>madrugadas criativas.</span></h1>
+
+        <p>
+          Na <strong>Midnight Brew Coffee Shop</strong>, acreditamos que as melhores ideias nascem depois da meia-noite.
+          Preparamos cafés especiais 100% Arábica, cold brews infusionados e doces artesanais entregues quentes
+          na sua porta ou no nosso lounge noturno.
+        </p>
+
+        <form class="busca-destaque" id="formBuscaDestaque">
+          <span>🔍</span>
+          <input type="text" id="campoBuscaDestaque" placeholder="O que vai acompanhar sua noite hoje? (Ex: Cold Brew)">
+          <button type="submit">Explorar Cardápio →</button>
+        </form>
+
+        <div class="botoes-destaque">
+          <a href="#favoritos" class="botao-branco">☕ Ver Todos os Produtos</a>
+          <a href="#clube" class="botao-escuro">✦ Entrar para o Midnight Club</a>
+        </div>
+
+        <div class="numeros">
+          <div>
+            <strong>22 min</strong>
+            <span>Tempo médio de entrega</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Grãos Arábica de Altitude</span>
+          </div>
+          <div>
+            <strong class="amarelo">4.9 ★</strong>
+            <span>+4.800 corujas satisfeitas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="destaque-imagem">
+        <div class="cartao-logo">
+          <span class="ponto p1"></span>
+          <span class="ponto p2"></span>
+          <span class="ponto p3"></span>
+
+          <div class="logo-grande">
+            <span class="logo-grande-topo">midnight</span>
+            <svg viewBox="0 0 100 120" width="120" height="140" aria-hidden="true">
+              <path d="M20 25 L80 25 L72 105 Q50 115 28 105 Z" fill="#0b1030" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+              <rect x="15" y="15" width="70" height="12" rx="6" fill="#0b1030" stroke="#fff" stroke-width="5"/>
+              <path d="M35 65 Q50 82 65 65" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="40" cy="52" r="4" fill="#fff"/>
+              <circle cx="60" cy="52" r="4" fill="#fff"/>
+            </svg>
+            <span class="logo-grande-baixo">brew</span>
+          </div>
+
+          <span class="legenda-logo">IDENTIDADE VISUAL OFICIAL • EST. 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE A MIDNIGHT BREW -->
+    <section class="porque">
+      <div class="titulo-secao">
+        <div>
+          <small>POR QUE A MIDNIGHT BREW?</small>
+          <h2>Feita para quem produz enquanto a cidade dorme</h2>
+        </div>
+        <p>Programadores, estudantes, gamers, artistas, médicos de plantão e amantes da noite têm ponto de encontro garantido.</p>
+      </div>
+
+      <div class="lista-vantagens">
+        <article class="vantagem">
+          <span class="icone-vantagem">🌙</span>
+          <h3>Torra Noturna em Pequenos Lotes</h3>
+          <p>Nossos grãos 100% Arábica do Cerrado Mineiro e Sul de Minas são torrados diariamente às 18h para garantir aroma intenso e baixa acidez.</p>
+        </article>
+
+        <article class="vantagem">
+          <span class="icone-vantagem">⚡</span>
+          <h3>Delivery Térmico Ultrarrápido</h3>
+          <p>Embalagens seladas a vácuo com isolamento duplo: seu Latte chega a 68°C e seu Cold Brew chega trincando de gelado até às 6h da manhã.</p>
+        </article>
+
+        <article class="vantagem">
+          <span class="icone-vantagem verde">▼</span>
+          <h3>Lounge Coworking &amp; Clube VIP</h3>
+          <p>A cada pedido pelo site você acumula pontos no <strong>Midnight Club</strong> para trocar por cafés grátis, brindes exclusivos e refil na loja física.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAVORITOS -->
+    <section class="favoritos" id="favoritos">
+      <div class="titulo-secao">
+        <div>
+          <small class="amarelo">OS MAIS PEDIDOS DA MADRUGADA</small>
+          <h2>Favoritos do Cardápio Noturno</h2>
+        </div>
+        <a href="produtos.html" class="botao-borda" id="botaoCardapioCompleto">Ver Cardápio Completo (12 itens) →</a>
+      </div>
+
+      <p class="aviso-busca" id="avisoBusca"></p>
+
+      <div class="lista-produtos" id="listaProdutos">
+
+        <article class="produto" data-nome="midnight nitro cold brew iced">
+          <div class="produto-etiquetas">
+            <span class="etiqueta-categoria">ICED &amp; COLD BREW</span>
+            <span class="etiqueta-amarela">Mais Vendido</span>
+          </div>
+          <div class="produto-foto">🥤</div>
+          <h3>Midnight Nitro Cold Brew</h3>
+          <p>Infusão a frio por 18 horas com gás nitrogênio, criando uma espuma cremosa aveludada e notas intensas de cacau 70%.</p>
+          <span class="cafeina">⚡ Cafeína: Extra Forte</span>
+          <div class="produto-rodape">
+            <div>
+              <small>VALOR UNITÁRIO</small>
+              <strong>R$ 22,90</strong>
+            </div>
+            <button class="botao-adicionar" data-preco="22.90">⊕ Adicionar</button>
+          </div>
+        </article>
+
+        <article class="produto" data-nome="blue moon lavender latte especiais">
+          <div class="produto-etiquetas">
+            <span class="etiqueta-categoria">ESPECIAIS DA MEIA-NOITE</span>
+            <span class="etiqueta-amarela">Assinatura da Casa</span>
+          </div>
+          <div class="produto-foto">☕</div>
+          <h3>Blue Moon Lavender Latte</h3>
+          <p>Espresso duplo 100% Arábica, leite vaporizado cremoso, calda artesanal de baunilha do Madagascar e toque azul...</p>
+          <span class="cafeina">⚡ Cafeína: Média</span>
+          <div class="produto-rodape">
+            <div>
+              <small>VALOR UNITÁRIO</small>
+              <strong>R$ 24,50</strong>
+            </div>
+            <button class="botao-adicionar" data-preco="24.50">⊕ Adicionar</button>
+          </div>
+        </article>
+
+        <article class="produto" data-nome="eclipse dark mocha cafés quentes">
+          <div class="produto-etiquetas">
+            <span class="etiqueta-categoria">CAFÉS QUENTES</span>
+            <span class="etiqueta-amarela">Favorito</span>
+          </div>
+          <div class="produto-foto">🥛</div>
+          <h3>Eclipse Dark Mocha 70%</h3>
+          <p>Combinação intensa de espresso duplo, ganache de chocolate belga meio amargo, leite de aveia vaporizado e raspa...</p>
+          <span class="cafeina">⚡ Cafeína: Alta</span>
+          <div class="produto-rodape">
+            <div>
+              <small>VALOR UNITÁRIO</small>
+              <strong>R$ 21,90</strong>
+            </div>
+            <button class="botao-adicionar" data-preco="21.90">⊕ Adicionar</button>
+          </div>
+        </article>
+
+        <article class="produto" data-nome="croissant folhado de amêndoas doces salgados">
+          <div class="produto-etiquetas">
+            <span class="etiqueta-categoria">DOCES &amp; SALGADOS</span>
+            <span class="etiqueta-amarela">Forno Noturno</span>
+          </div>
+          <div class="produto-foto">🥐</div>
+          <h3>Croissant Folhado de Amêndoas</h3>
+          <p>Massa folhada francesa com manteiga extra, recheada com creme frangipane de amêndoas tostadas e açúcar de...</p>
+          <span class="cafeina">⚡ Cafeína: Sem Cafeína</span>
+          <div class="produto-rodape">
+            <div>
+              <small>VALOR UNITÁRIO</small>
+              <strong>R$ 18,90</strong>
+            </div>
+            <button class="botao-adicionar" data-preco="18.90">⊕ Adicionar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CHAMADA PRIMEIRA COMPRA -->
+    <section class="chamada" id="cadastro">
+      <div class="chamada-texto">
+        <span class="etiqueta-amarela">PRIMEIRA COMPRA?</span>
+        <h2>Ganhe 10% OFF + Entrega Grátis no seu 1º Pedido Noturno!</h2>
+        <p>Crie sua conta gratuita em menos de 1 minuto e use o cupom <code id="cupom" title="Clique para copiar">MIDNIGHT10</code> no carrinho.</p>
+      </div>
+      <div class="chamada-botoes">
+        <a href="#cadastro" class="botao-branco" id="botaoCriarConta">Criar Minha Conta Agora</a>
+        <a href="#login" class="botao-escuro" id="botaoJaTenhoConta">Já tenho conta (Login)</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+
+      <div class="rodape-coluna sobre">
+        <a href="#inicio" class="logo">
+          <span class="logo-icone">☕</span>
+          <span class="logo-texto">
+            <small><b>MIDNIGHT</b></small>
+            <strong>brew <small>COFFEE SHOP</small></strong>
+          </span>
+        </a>
+        <p>A primeira cafeteria especializada em torras noturnas e entregas térmicas 24h. Energia, sabor e aconchego para quem cria sob a luz da lua.</p>
+        <div class="redes">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="WhatsApp">✆</a>
+          <a href="#" aria-label="Spotify">●</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>PÁGINAS DO SITE</h4>
+        <a href="#inicio">Tela Inicial (Home)</a>
+        <a href="#favoritos">Página de Produtos</a>
+        <a href="carrinho.html">Carrinho de Compras</a>
+        <a href="pedidos.html">Pedidos Feitos</a>
+        <a href="#perfil">Perfil do Usuário</a>
+        <a href="#cadastro">Página de Cadastro</a>
+        <a href="#login" class="azul">Pop-up de Login</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>HORÁRIO &amp; LOUNGE NOTURNO</h4>
+        <p class="info"><span>🌙</span> <b>Lounge &amp; Coworking:</b><br>Todos os dias das 18h00 às 06h00</p>
+        <p class="info"><span>🛵</span> <b>Delivery Online:</b><br>Funcionamento 24 Horas</p>
+        <p class="info"><span>📍</span> Av. Paulista, 1840 / Savassi, BH<br>Wi-Fi 1Gbps &amp; Tomadas em todas as mesas</p>
+      </div>
+
+      <div class="rodape-coluna" id="clube">
+        <h4>CLUBE DA MEIA-NOITE</h4>
+        <p>Receba alertas de novas safras de grãos e cupons relâmpago das 00h às 04h.</p>
+        <form class="form-clube" id="formClube">
+          <input type="email" id="emailClube" placeholder="Seu melhor e-mail..." required>
+          <button type="submit">Inscrever-se Gratuitamente</button>
+        </form>
+        <p class="msg-clube" id="msgClube"></p>
+      </div>
+
+    </div>
+
+    <div class="rodape-baixo">
+      <p>© 2026 <b>Midnight Brew Coffee Shop Ltda.</b> Todos os direitos reservados.</p>
+      <div>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AVISO FLUTUANTE -->
+  <div class="aviso" id="aviso"></div>
+
+  <script src="compartilhado.js"></script>
+  <script src="conta.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

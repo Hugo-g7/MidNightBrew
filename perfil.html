@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil | Midnight Brew Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="logo">
+        <span class="logo-icone">☕</span>
+        <span class="logo-texto">
+          <small><b>MIDNIGHT</b> COFFEE SHOP</small>
+          <strong>brew</strong>
+        </span>
+      </a>
+
+      <form class="busca-topo" id="formBuscaTopo">
+        <span>🔍</span>
+        <input type="text" id="campoBuscaTopo" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <nav class="menu">
+        <a href="index.html" class="menu-link">⌂ Início</a>
+        <a href="produtos.html" class="menu-link">Produtos</a>
+        <a href="pedidos.html" class="menu-link">Pedidos <span class="bolinha azul">2</span></a>
+        <a href="carrinho.html" class="menu-link">🛒 <span class="bolinha amarela" id="contadorCarrinho">4</span> Carrinho</a>
+        <a href="perfil.html" class="menu-link ativo-borda">Perfil</a>
+        <a href="#" class="botao-borda" id="botaoLogin">Login</a>
+        <a href="cadastro.html" class="botao-azul" id="botaoCadastro">Cadastre-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+
+    <!-- QUANDO NÃO ESTÁ LOGADO -->
+    <section class="perfil-bloqueado" id="perfilBloqueado">
+      <div class="bloqueado-icone">🔒</div>
+      <h2>Entre para ver seu perfil</h2>
+      <p>Faça login para acessar seus dados, endereços, pagamentos e pontos do Midnight Club.</p>
+      <div class="bloqueado-botoes">
+        <button class="botao-azul" id="botaoEntrarPerfil">Entrar</button>
+        <a href="cadastro.html" class="botao-escuro">Criar conta</a>
+      </div>
+    </section>
+
+    <!-- PERFIL -->
+    <div id="perfilConteudo">
+
+      <div class="perfil-linha">
+        <!-- cartão do usuário -->
+        <section class="cartao-usuario">
+          <div class="avatar">
+            <span id="avatarIniciais">LM</span>
+            <i>VIP</i>
+          </div>
+          <div class="usuario-dados">
+            <small id="nivelMembro">👑 Membro Coruja Noturna Nível Ouro</small>
+            <h1 id="nomeUsuario">Lucas Mendonça</h1>
+            <p id="emailUsuario">lucas.mendonca@midnightbrew.com.br</p>
+            <div class="chips">
+              <span id="chipFavorito">☕ Favorito: Midnight Nitro Cold Brew</span>
+              <span id="chipPedidos">🍪 14 pedidos realizados</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- fidelidade -->
+        <section class="fidelidade">
+          <div class="fidelidade-topo">
+            <div>
+              <small>PROGRAMA DE FIDELIDADE</small>
+              <h2>Midnight Club Pass</h2>
+            </div>
+            <div class="pontos">
+              <strong id="pontosTotal">420 <span>pts</span></strong>
+              <small id="pontosFaltam">Faltam 80 pts p/ bebida grátis</small>
+            </div>
+          </div>
+
+          <div class="barra"><div class="barra-preenchida" id="barraPontos"></div></div>
+          <div class="barra-legenda">
+            <span id="selosTexto">8 de 10 selos noturnos conquistados</span>
+            <b id="porcentagemPontos">84%</b>
+          </div>
+
+          <div class="fidelidade-rodape">
+            <span>Cashback ativo: <b>5% em todas as compras</b></span>
+            <button id="botaoResgatar">Resgatar Prêmio</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="perfil-linha">
+        <!-- dados pessoais -->
+        <section class="dados-pessoais">
+          <div class="dados-topo">
+            <div>
+              <h2>Dados Pessoais da Conta</h2>
+              <p>Mantenha seus dados atualizados para entregas rápidas na madrugada.</p>
+            </div>
+            <span class="dados-icone">🪪</span>
+          </div>
+
+          <form id="formDados">
+            <div class="campos">
+              <div class="campo">
+                <label for="dadosNome">NOME COMPLETO</label>
+                <input type="text" id="dadosNome" required>
+              </div>
+              <div class="campo">
+                <label for="dadosCpf">CPF</label>
+                <input type="text" id="dadosCpf">
+              </div>
+              <div class="campo">
+                <label for="dadosEmail">E-MAIL</label>
+                <input type="email" id="dadosEmail" required>
+              </div>
+              <div class="campo">
+                <label for="dadosTelefone">TELEFONE / WHATSAPP</label>
+                <input type="text" id="dadosTelefone">
+              </div>
+              <div class="campo">
+                <label for="dadosLeite">PREFERÊNCIA DE LEITE</label>
+                <select id="dadosLeite">
+                  <option>Leite Vegetal de Aveia (Barista)</option>
+                  <option>Leite Integral</option>
+                  <option>Leite Desnatado</option>
+                  <option>Leite de Amêndoas</option>
+                  <option>Sem Leite</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="dadosTorra">INTENSIDADE DE TORRA PREFERIDA</label>
+                <select id="dadosTorra">
+                  <option>Torra Midnight Intensa (Extra Cafeína)</option>
+                  <option>Torra Média Equilibrada</option>
+                  <option>Torra Clara Suave</option>
+                  <option>Descafeinado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dados-botao">
+              <button type="submit" class="botao-salvar">💾 Salvar Alterações do Perfil</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- coluna da direita -->
+        <div class="coluna-direita">
+
+          <section class="enderecos">
+            <div class="bloco-topo">
+              <h2>📍 Endereços de Entrega</h2>
+              <button class="botao-texto" id="botaoNovoEndereco">+ Novo</button>
+            </div>
+            <div id="listaEnderecos"></div>
+          </section>
+
+          <section class="pagamentos">
+            <div class="bloco-topo">
+              <h2>💳 Pagamento Rápido</h2>
+              <span class="criptografado">Criptografado</span>
+            </div>
+            <div id="listaPagamentos"></div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+
+      <div class="rodape-coluna sobre">
+        <a href="index.html" class="logo">
+          <span class="logo-icone">☕</span>
+          <span class="logo-texto">
+            <small><b>MIDNIGHT</b></small>
+            <strong>brew <small>COFFEE SHOP</small></strong>
+          </span>
+        </a>
+        <p>A primeira cafeteria especializada em torras noturnas e entregas térmicas 24h. Energia, sabor e aconchego para quem cria sob a luz da lua.</p>
+        <div class="redes">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="WhatsApp">✆</a>
+          <a href="#" aria-label="Spotify">●</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>PÁGINAS DO SITE</h4>
+        <a href="index.html">Tela Inicial (Home)</a>
+        <a href="produtos.html">Página de Produtos</a>
+        <a href="carrinho.html">Carrinho de Compras</a>
+        <a href="pedidos.html">Pedidos Feitos</a>
+        <a href="perfil.html">Perfil do Usuário</a>
+        <a href="cadastro.html">Página de Cadastro</a>
+        <a href="#" class="azul">Pop-up de Login</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>HORÁRIO &amp; LOUNGE NOTURNO</h4>
+        <p class="info"><span>🌙</span> <b>Lounge &amp; Coworking:</b><br>Todos os dias das 18h00 às 06h00</p>
+        <p class="info"><span>🛵</span> <b>Delivery Online:</b><br>Funcionamento 24 Horas</p>
+        <p class="info"><span>📍</span> Av. Paulista, 1840 / Savassi, BH<br>Wi-Fi 1Gbps &amp; Tomadas em todas as mesas</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>CLUBE DA MEIA-NOITE</h4>
+        <p>Receba alertas de novas safras de grãos e cupons relâmpago das 00h às 04h.</p>
+        <form class="form-clube" id="formClube">
+          <input type="email" id="emailClube" placeholder="Seu melhor e-mail..." required>
+          <button type="submit">Inscrever-se Gratuitamente</button>
+        </form>
+        <p class="msg-clube" id="msgClube"></p>
+      </div>
+
+    </div>
+
+    <div class="rodape-baixo">
+      <p>© 2026 <b>Midnight Brew Coffee Shop Ltda.</b> Todos os direitos reservados.</p>
+      <div>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AVISO FLUTUANTE -->
+  <div class="aviso" id="aviso"></div>
+
+  <script src="compartilhado.js"></script>
+  <script src="conta.js"></script>
+  <script src="perfil.js"></script>
+</body>
+</html>

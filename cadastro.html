@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Midnight Brew Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="logo">
+        <span class="logo-icone">☕</span>
+        <span class="logo-texto">
+          <small><b>MIDNIGHT</b> COFFEE SHOP</small>
+          <strong>brew</strong>
+        </span>
+      </a>
+
+      <form class="busca-topo" id="formBuscaTopo">
+        <span>🔍</span>
+        <input type="text" id="campoBuscaTopo" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <nav class="menu">
+        <a href="index.html" class="menu-link">⌂ Início</a>
+        <a href="produtos.html" class="menu-link">Produtos</a>
+        <a href="pedidos.html" class="menu-link">Pedidos <span class="bolinha azul">2</span></a>
+        <a href="carrinho.html" class="menu-link">🛒 <span class="bolinha amarela" id="contadorCarrinho">4</span> Carrinho</a>
+        <a href="perfil.html" class="menu-link">Perfil</a>
+        <a href="#" class="botao-borda" id="botaoLogin">Login</a>
+        <a href="cadastro.html" class="botao-azul" id="botaoCadastro">Cadastre-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+
+    <section class="cartao-cadastro">
+      <small>PRIMEIRA COMPRA? GANHE 10% OFF</small>
+      <h1>Crie sua conta Midnight Brew</h1>
+      <p>Leva menos de 1 minuto. Depois é só usar o cupom <code>MIDNIGHT10</code> no carrinho.</p>
+
+      <form id="formCadastro">
+        <div class="campo">
+          <label for="cadNome">NOME COMPLETO</label>
+          <input type="text" id="cadNome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="campo-duplo">
+          <div class="campo">
+            <label for="cadEmail">E-MAIL</label>
+            <input type="email" id="cadEmail" placeholder="seu@email.com" required>
+          </div>
+          <div class="campo">
+            <label for="cadTelefone">TELEFONE / WHATSAPP</label>
+            <input type="text" id="cadTelefone" placeholder="(31) 99999-9999" required>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="cadCpf">CPF</label>
+          <input type="text" id="cadCpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="campo-duplo">
+          <div class="campo">
+            <label for="cadSenha">SENHA</label>
+            <input type="password" id="cadSenha" placeholder="Mínimo 6 caracteres" required>
+          </div>
+          <div class="campo">
+            <label for="cadSenha2">CONFIRMAR SENHA</label>
+            <input type="password" id="cadSenha2" placeholder="Repita a senha" required>
+          </div>
+        </div>
+
+        <p class="erro-cadastro" id="erroCadastro"></p>
+
+        <button type="submit" class="botao-criar">Criar Minha Conta</button>
+      </form>
+
+      <p class="ja-tenho">Já tem conta? <a href="#" id="linkJaTenho">Entrar</a></p>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+
+      <div class="rodape-coluna sobre">
+        <a href="index.html" class="logo">
+          <span class="logo-icone">☕</span>
+          <span class="logo-texto">
+            <small><b>MIDNIGHT</b></small>
+            <strong>brew <small>COFFEE SHOP</small></strong>
+          </span>
+        </a>
+        <p>A primeira cafeteria especializada em torras noturnas e entregas térmicas 24h. Energia, sabor e aconchego para quem cria sob a luz da lua.</p>
+        <div class="redes">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="WhatsApp">✆</a>
+          <a href="#" aria-label="Spotify">●</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>PÁGINAS DO SITE</h4>
+        <a href="index.html">Tela Inicial (Home)</a>
+        <a href="produtos.html">Página de Produtos</a>
+        <a href="carrinho.html">Carrinho de Compras</a>
+        <a href="pedidos.html">Pedidos Feitos</a>
+        <a href="perfil.html">Perfil do Usuário</a>
+        <a href="cadastro.html">Página de Cadastro</a>
+        <a href="#" class="azul">Pop-up de Login</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>HORÁRIO &amp; LOUNGE NOTURNO</h4>
+        <p class="info"><span>🌙</span> <b>Lounge &amp; Coworking:</b><br>Todos os dias das 18h00 às 06h00</p>
+        <p class="info"><span>🛵</span> <b>Delivery Online:</b><br>Funcionamento 24 Horas</p>
+        <p class="info"><span>📍</span> Av. Paulista, 1840 / Savassi, BH<br>Wi-Fi 1Gbps &amp; Tomadas em todas as mesas</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>CLUBE DA MEIA-NOITE</h4>
+        <p>Receba alertas de novas safras de grãos e cupons relâmpago das 00h às 04h.</p>
+        <form class="form-clube" id="formClube">
+          <input type="email" id="emailClube" placeholder="Seu melhor e-mail..." required>
+          <button type="submit">Inscrever-se Gratuitamente</button>
+        </form>
+        <p class="msg-clube" id="msgClube"></p>
+      </div>
+
+    </div>
+
+    <div class="rodape-baixo">
+      <p>© 2026 <b>Midnight Brew Coffee Shop Ltda.</b> Todos os direitos reservados.</p>
+      <div>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AVISO FLUTUANTE -->
+  <div class="aviso" id="aviso"></div>
+
+  <script src="compartilhado.js"></script>
+  <script src="conta.js"></script>
+  <script src="cadastro.js"></script>
+</body>
+</html>

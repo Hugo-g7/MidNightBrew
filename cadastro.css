@@ -1,0 +1,124 @@
+/* estilos extras da página de cadastro
+   (o resto vem do style.css) */
+
+.cartao-cadastro {
+  max-width: 520px;
+  margin: 10px auto 0;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(110, 130, 255, 0.4);
+  background: linear-gradient(135deg, rgba(6, 8, 34, 0.97), rgba(12, 20, 100, 0.55));
+  box-shadow: 0 0 40px rgba(60, 80, 255, 0.18);
+}
+
+.cartao-cadastro small {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #fbbf24;
+}
+
+.cartao-cadastro h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 6px 0;
+}
+
+.cartao-cadastro > p {
+  font-size: 12px;
+  color: #dfe4ff;
+  margin-bottom: 22px;
+}
+
+.cartao-cadastro code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #fbbf24;
+  background: #04051a;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+.campo {
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.campo-duplo {
+  display: flex;
+  gap: 14px;
+}
+
+.campo label {
+  display: block;
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #6f84ff;
+  margin-bottom: 6px;
+}
+
+.campo input {
+  width: 100%;
+  background: #03041a;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: #8fa0ff;
+}
+
+.campo input::placeholder {
+  color: #6f7bb8;
+}
+
+.erro-cadastro {
+  font-size: 11px;
+  color: #f87171;
+  min-height: 16px;
+  margin-bottom: 8px;
+}
+
+.botao-criar {
+  width: 100%;
+  background: #3a52f0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.botao-criar:hover {
+  background: #5166ff;
+}
+
+.ja-tenho {
+  text-align: center;
+  font-size: 11px;
+  color: #dfe4ff;
+  margin-top: 16px;
+}
+
+.ja-tenho a {
+  color: #8fa0ff;
+  font-weight: 800;
+}
+
+@media (max-width: 960px) {
+  .campo-duplo {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cartao-cadastro {
+    padding: 22px;
+  }
+}

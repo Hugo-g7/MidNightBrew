@@ -1,0 +1,312 @@
+/* estilos extras da página de pedidos
+   (o resto vem do style.css) */
+
+.menu-link.ativo-borda {
+  background: #0a0e3a;
+  border: 2px solid #fff;
+}
+
+/* ---------- topo ---------- */
+.topo-pedidos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(110, 130, 255, 0.35);
+  background: linear-gradient(135deg, rgba(8, 10, 40, 0.95), rgba(14, 22, 110, 0.4));
+}
+
+.topo-pedidos small {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #8fa0ff;
+}
+
+.topo-pedidos h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 4px 0;
+}
+
+.topo-pedidos p {
+  font-size: 11px;
+  color: #e4e8ff;
+}
+
+.campo-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 216px;
+  background: #04051a;
+  border: 1px solid rgba(110, 130, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.campo-busca input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 11px;
+}
+
+.campo-busca input::placeholder {
+  color: #aab4ee;
+}
+
+.campo-busca:focus-within {
+  border-color: #8fa0ff;
+}
+
+/* ---------- lista de pedidos ---------- */
+.lista-pedidos {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pedido {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(110, 130, 255, 0.35);
+  background: linear-gradient(135deg, rgba(6, 8, 34, 0.96), rgba(10, 16, 80, 0.55));
+}
+
+.pedido-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 18px;
+}
+
+.pedido-identificacao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.numero-pedido {
+  background: #1f2fe0;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.pedido-data {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pedido-endereco {
+  font-size: 9.5px;
+  color: #8fa0ff;
+}
+
+.pedido-valor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.situacao {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid;
+}
+
+.situacao.a-caminho {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.6);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.situacao.concluido {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.6);
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.pedido-total {
+  text-align: right;
+}
+
+.pedido-total small {
+  display: block;
+  font-size: 8.5px;
+  color: #aab4ee;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.pedido-total strong {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+/* etapas */
+.etapas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.etapa {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(110, 130, 255, 0.3);
+  background: #04051a;
+  color: #8f9bdc;
+}
+
+.etapa b {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 800;
+}
+
+.etapa span {
+  display: block;
+  font-size: 9px;
+}
+
+.etapa.feita {
+  background: #3f54e0;
+  border-color: #8fa0ff;
+  color: #fff;
+}
+
+.etapa.entregue {
+  background: #10b981;
+  border-color: #34d399;
+  color: #fff;
+}
+
+.etapa-icone {
+  font-size: 14px;
+}
+
+.etapa.pendente b {
+  color: #8fa0ff;
+}
+
+/* itens */
+.itens {
+  padding: 14px 14px 6px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #03041a;
+  margin-bottom: 18px;
+}
+
+.itens h4 {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #8fa0ff;
+  margin-bottom: 8px;
+}
+
+.item-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.item-linha:last-child {
+  border-bottom: none;
+}
+
+.item-linha i {
+  font-style: normal;
+  color: #8fa0ff;
+  font-size: 10px;
+  margin-right: 2px;
+}
+
+/* rodapé do pedido */
+.pedido-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagamento {
+  font-size: 9.5px;
+  color: #aab4ee;
+}
+
+.pagamento b {
+  color: #fff;
+}
+
+.botao-repetir {
+  background: #3a52f0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.botao-repetir:hover {
+  background: #5166ff;
+}
+
+.sem-resultado {
+  display: none;
+  text-align: center;
+  font-size: 13px;
+  color: #fbbf24;
+  padding: 40px 0;
+}
+
+/* ---------- celular / tablet ---------- */
+@media (max-width: 960px) {
+  .topo-pedidos,
+  .pedido-topo,
+  .pedido-rodape {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campo-busca {
+    width: 100%;
+  }
+
+  .etapas {
+    flex-direction: column;
+  }
+
+  .pedido-valor {
+    justify-content: space-between;
+  }
+
+  .pedido-rodape {
+    gap: 12px;
+  }
+}
