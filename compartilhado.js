@@ -1,18 +1,18 @@
 // código usado por todas as páginas do site (carrinho e lista de produtos)
 
 var catalogo = [
-  { nome: 'Midnight Nitro Cold Brew', categoria: 'Iced & Cold Brew', preco: 22.90, icone: '🥤' },
-  { nome: 'Blue Moon Lavender Latte', categoria: 'Especiais da Meia-Noite', preco: 24.50, icone: '☕' },
-  { nome: 'Eclipse Dark Mocha 70%', categoria: 'Cafés Quentes', preco: 21.90, icone: '🥛' },
-  { nome: 'Croissant Folhado de Amêndoas', categoria: 'Doces & Salgados', preco: 18.90, icone: '🥐' },
-  { nome: 'Espresso Duplo Insônia', categoria: 'Cafés Quentes', preco: 12.90, icone: '⚡' },
-  { nome: 'Caramel Salted Night Macchiato', categoria: 'Cafés Quentes', preco: 23.00, icone: '☕' },
-  { nome: 'Iced Vanilla Sweet Cream Brew', categoria: 'Iced & Cold Brew', preco: 23.90, icone: '🥤' },
-  { nome: 'Orange Tonic Espresso', categoria: 'Iced & Cold Brew', preco: 21.50, icone: '🍊' },
-  { nome: 'Nebula Pistachio Frappé', categoria: 'Especiais da Meia-Noite', preco: 27.90, icone: '🧋' },
-  { nome: 'Chai Latte Estrelado (Sem Café)', categoria: 'Especiais da Meia-Noite', preco: 19.90, icone: '🍵' },
-  { nome: 'Brownie Belga Fudge & Flor de Sal', categoria: 'Doces & Salgados', preco: 16.90, icone: '🍫' },
-  { nome: 'Toast Brioche Queijo Brie & Mel', categoria: 'Doces & Salgados', preco: 24.90, icone: '🥪' }
+  { nome: 'Midnight Nitro Cold Brew', categoria: 'Iced & Cold Brew', preco: 22.90, icone: 'iced-vanilla-sweet-cream.jpg' },
+  { nome: 'Blue Moon Lavender Latte', categoria: 'Especiais da Meia-Noite', preco: 24.50, icone: 'chai-latte-estrelado.jpg' },
+  { nome: 'Eclipse Dark Mocha 70%', categoria: 'Cafés Quentes', preco: 21.90, icone: 'caramel-salted-macchiato.jpg' },
+  { nome: 'Croissant Folhado de Amêndoas', categoria: 'Doces & Salgados', preco: 18.90, icone: 'brownie-belga-fudge.jpg' },
+  { nome: 'Espresso Duplo Insônia', categoria: 'Cafés Quentes', preco: 12.90, icone: 'espresso-duplo-insonia.jpg' },
+  { nome: 'Caramel Salted Night Macchiato', categoria: 'Cafés Quentes', preco: 23.00, icone: 'caramel-salted-macchiato.jpg' },
+  { nome: 'Iced Vanilla Sweet Cream Brew', categoria: 'Iced & Cold Brew', preco: 23.90, icone: 'iced-vanilla-sweet-cream.jpg' },
+  { nome: 'Orange Tonic Espresso', categoria: 'Iced & Cold Brew', preco: 21.50, icone: 'orange-tonic-espresso.jpg' },
+  { nome: 'Nebula Pistachio Frappé', categoria: 'Especiais da Meia-Noite', preco: 27.90, icone: 'nebula-pistachio-frappe.jpg' },
+  { nome: 'Chai Latte Estrelado (Sem Café)', categoria: 'Especiais da Meia-Noite', preco: 19.90, icone: 'chai-latte-estrelado.jpg' },
+  { nome: 'Brownie Belga Fudge & Flor de Sal', categoria: 'Doces & Salgados', preco: 16.90, icone: 'brownie-belga-fudge.jpg' },
+  { nome: 'Toast Brioche Queijo Brie & Mel', categoria: 'Doces & Salgados', preco: 24.90, icone: 'toast-brioche-brie.jpg' }
 ];
 
 function formatarPreco(valor) {
@@ -25,16 +25,13 @@ function buscarProduto(nome) {
   });
 }
 
-// carrinho: lista de { nome, qtd } guardada no navegador
 function lerCarrinho() {
   try {
     var salvo = localStorage.getItem('itensCarrinho');
     if (salvo) {
       return JSON.parse(salvo);
     }
-  } catch (erro) {
-    // se der erro, usa o carrinho inicial abaixo
-  }
+  } catch (erro) {}
 
   return [
     { nome: 'Midnight Nitro Cold Brew', qtd: 1 },
