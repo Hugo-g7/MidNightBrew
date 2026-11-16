@@ -29,7 +29,7 @@
 
       <nav class="menu">
         <a href="produtos.html" class="menu-link ativo">Produtos</a>
-        <a href="carrinho.html" class="menu-link">Carrinho <span class="bolinha azul" id="contadorCarrinho">0</span></a>
+        <a href="carrinho.html" class="menu-link">Carrinho <span class="bolinha azul" id="contadorCarrinho">3</span></a>
         <a href="pedidos.html" class="menu-link">Pedidos</a>
         <a href="#" class="menu-link" id="botaoLogin">Entrar</a>
         <a href="cadastro.html" class="menu-link" id="botaoCadastro">Cadastre-se</a>
@@ -47,38 +47,227 @@
         <h1>Nossos Produtos</h1>
         <p>Explore cafés artesanais, bebidas geladas, acompanhamentos e especialidades preparadas para iluminar a sua noite.</p>
       </div>
+    </div>
 
-      <div class="topo-produtos-filtros">
-        <div class="campo-busca">
-          <span>🔍</span>
-          <input type="text" id="inputBusca" placeholder="Pesquisar sabor, nome...">
+    <!-- GRADE DE PRODUTOS COM AS FOTOS REAIS -->
+    <div class="lista-produtos grade" id="listaProdutos" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 26px;">
+      
+      <!-- Produto 1 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Iced &amp; Cold Brew</span>
+          <span class="etiqueta-amarela">Top</span>
         </div>
-        <select id="selectOrdenar">
-          <option value="destaque">Ordenar por: Destaque</option>
-          <option value="menor-preco">Menor Preço</option>
-          <option value="maior-preco">Maior Preço</option>
-          <option value="nome">Nome (A-Z)</option>
-        </select>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="iced-vanilla-sweet-cream.jpg" alt="Midnight Nitro Cold Brew" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Midnight Nitro Cold Brew</h3>
+        <p>Cold brew extraído a frio com infusão de nitrogênio.</p>
+        <span class="cafeina">⚡ Cafeína Alta</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 22,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Midnight Nitro Cold Brew', 1)">Adicionar</button>
+        </div>
       </div>
-    </div>
 
-    <!-- CATEGORIAS -->
-    <div class="barra-categorias">
-      <div class="categorias">
-        <button class="categoria ativa">Todos</button>
-        <button class="categoria">Cafés Quentes</button>
-        <button class="categoria">Iced &amp; Cold Brew</button>
-        <button class="categoria">Especiais da Meia-Noite</button>
-        <button class="categoria">Doces &amp; Salgados</button>
+      <!-- Produto 2 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Especiais</span>
+          <span class="etiqueta-amarela">Favorito</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="chai-latte-estrelado.jpg" alt="Blue Moon Lavender Latte" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Blue Moon Lavender Latte</h3>
+        <p>Espresso com xarope artesanal de lavanda e leite vaporizado.</p>
+        <span class="cafeina">☕ Cafeína Média</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 24,50</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Blue Moon Lavender Latte', 1)">Adicionar</button>
+        </div>
       </div>
-      <span class="contagem" id="contadorProdutos">12 produtos encontrados</span>
-    </div>
 
-    <!-- GRADE DE PRODUTOS (Preenchida automaticamente pelo produtos.js com as imagens reais) -->
-    <div class="lista-produtos grade" id="listaProdutos"></div>
+      <!-- Produto 3 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Cafés Quentes</span>
+          <span class="etiqueta-amarela">70%</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="caramel-salted-macchiato.jpg" alt="Eclipse Dark Mocha 70%" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Eclipse Dark Mocha 70%</h3>
+        <p>Chocolate belga amargo com espresso duplo e leite vaporizado.</p>
+        <span class="cafeina">⚡ Intenso</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 21,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Eclipse Dark Mocha 70%', 1)">Adicionar</button>
+        </div>
+      </div>
 
-    <div class="sem-resultado" id="semResultado">
-      Nenhum produto encontrado com esse termo ou categoria.
+      <!-- Produto 4 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Doces &amp; Salgados</span>
+          <span class="etiqueta-amarela">Fudge</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="brownie-belga-fudge.jpg" alt="Croissant Folhado de Amêndoas" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Croissant Folhado de Amêndoas</h3>
+        <p>Massa folhada amanteigada recheada com creme de amêndoas.</p>
+        <span class="cafeina">🥐 Artesanal</span>
+        <div class="produto-rodape">
+          <div><small>porção</small><strong>R$ 18,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Croissant Folhado de Amêndoas', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Cafés Quentes</span>
+          <span class="etiqueta-amarela">Duplo</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="espresso-duplo-insonia.jpg" alt="Espresso Duplo Insônia" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Espresso Duplo Insônia</h3>
+        <p>Extração dupla intensa de grãos de torra escura.</p>
+        <span class="cafeina">⚡ Potente</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 12,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Espresso Duplo Insônia', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Cafés Quentes</span>
+          <span class="etiqueta-amarela">Caramelo</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="caramel-salted-macchiato.jpg" alt="Caramel Salted Night Macchiato" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Caramel Salted Night Macchiato</h3>
+        <p>Espresso aveludado com calda de caramelo salgado.</p>
+        <span class="cafeina">☕ Doce &amp; Salgado</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 23,00</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Caramel Salted Night Macchiato', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 7 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Iced &amp; Cold Brew</span>
+          <span class="etiqueta-amarela">Gelado</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="iced-vanilla-sweet-cream.jpg" alt="Iced Vanilla Sweet Cream Brew" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Iced Vanilla Sweet Cream Brew</h3>
+        <p>Cold brew extraído a frio com creme doce de baunilha.</p>
+        <span class="cafeina">🥤 Suave</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 23,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Iced Vanilla Sweet Cream Brew', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 8 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Iced &amp; Cold Brew</span>
+          <span class="etiqueta-amarela">Cítrico</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="orange-tonic-espresso.jpg" alt="Orange Tonic Espresso" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Orange Tonic Espresso</h3>
+        <p>Água tónica, sumo de laranja e shot de espresso.</p>
+        <span class="cafeina">🍊 Refrescante</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 21,50</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Orange Tonic Espresso', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 9 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Especiais</span>
+          <span class="etiqueta-amarela">Frappé</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="nebula-pistachio-frappe.jpg" alt="Nebula Pistachio Frappé" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Nebula Pistachio Frappé</h3>
+        <p>Batido gelado de pistácio com chantilly e frutos vermelhos.</p>
+        <span class="cafeina">🧋 Cremoso</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 27,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Nebula Pistachio Frappé', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 10 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Especiais</span>
+          <span class="etiqueta-amarela">Sem Café</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="chai-latte-estrelado.jpg" alt="Chai Latte Estrelado" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Chai Latte Estrelado (Sem Café)</h3>
+        <p>Infusão aromática de chá preto, canela e cardamomo.</p>
+        <span class="cafeina">🍵 Sem Cafeína</span>
+        <div class="produto-rodape">
+          <div><small>individual</small><strong>R$ 19,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Chai Latte Estrelado (Sem Café)', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 11 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Doces &amp; Salgados</span>
+          <span class="etiqueta-amarela">Belga</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="brownie-belga-fudge.jpg" alt="Brownie Belga Fudge & Flor de Sal" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Brownie Belga Fudge &amp; Flor de Sal</h3>
+        <p>Brownie denso de chocolate belga 70% com nozes e caramelo.</p>
+        <span class="cafeina">🍫 Sobremesa</span>
+        <div class="produto-rodape">
+          <div><small>fatia</small><strong>R$ 16,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Brownie Belga Fudge & Flor de Sal', 1)">Adicionar</button>
+        </div>
+      </div>
+
+      <!-- Produto 12 -->
+      <div class="produto">
+        <div class="produto-etiquetas">
+          <span class="etiqueta-categoria">Doces &amp; Salgados</span>
+          <span class="etiqueta-amarela">Brioche</span>
+        </div>
+        <div class="produto-foto" style="padding: 0; overflow: hidden; height: 160px; border-radius: 12px;">
+          <img src="toast-brioche-brie.jpg" alt="Toast Brioche Queijo Brie & Mel" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Toast Brioche Queijo Brie &amp; Mel</h3>
+        <p>Brioche tostado com queijo brie derretido, figos e mel.</p>
+        <span class="cafeina">🥪 Gourmet</span>
+        <div class="produto-rodape">
+          <div><small>unidade</small><strong>R$ 24,90</strong></div>
+          <button class="botao-adicionar" onclick="adicionarAoCarrinho('Toast Brioche Queijo Brie & Mel', 1)">Adicionar</button>
+        </div>
+      </div>
+
     </div>
 
   </main>
@@ -106,6 +295,5 @@
   <!-- SCRIPTS -->
   <script src="compartilhado.js"></script>
   <script src="conta.js"></script>
-  <script src="produtos.js"></script>
 </body>
 </html>
