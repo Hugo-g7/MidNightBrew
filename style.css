@@ -1069,7 +1069,154 @@ button {
   object-fit: contain !important;
   display: block !important;
 }
+/* ---------- BOTÃO E ESTILOS DO MODO CLARO / ESCURO ---------- */
+.botao-tema {
+  background: #070a26;
+  color: #ffffff;
+  border: 1px solid rgba(110, 130, 255, 0.45);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
 
+.botao-tema:hover {
+  background: #1a2270;
+}
+
+/* Regras ativadas quando o Modo Claro está ligado */
+body.modo-claro {
+  background: linear-gradient(115deg, #f3f5ff 0%, #e4e9ff 50%, #d4dcff 100%);
+  color: #0b1033;
+}
+
+body.modo-claro .cabecalho {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(58, 82, 240, 0.2);
+}
+
+body.modo-claro .logo-texto strong,
+body.modo-claro .menu-link {
+  color: #0b1033;
+}
+
+body.modo-claro .menu-link:hover {
+  background: rgba(58, 82, 240, 0.08);
+}
+
+body.modo-claro .menu-link.ativo {
+  background: #3a52f0;
+  color: #ffffff;
+}
+
+body.modo-claro .busca-topo,
+body.modo-claro .busca-destaque input,
+body.modo-claro .campo-busca,
+body.modo-claro .topo-produtos-filtros select,
+body.modo-claro .campo input,
+body.modo-claro .campos .campo input,
+body.modo-claro .campos .campo select,
+body.modo-claro .linha-cupom input,
+body.modo-claro .campo-observacao,
+body.modo-claro .form-clube input,
+body.modo-claro .modal input {
+  background: #ffffff;
+  color: #0b1033;
+  border-color: rgba(58, 82, 240, 0.3);
+}
+
+body.modo-claro .botao-tema,
+body.modo-claro .botao-escuro,
+body.modo-claro .botao-borda,
+body.modo-claro .categoria {
+  background: #ffffff;
+  color: #0b1033;
+  border-color: rgba(58, 82, 240, 0.3);
+}
+
+body.modo-claro .categoria.ativa {
+  background: #3a52f0;
+  color: #ffffff;
+}
+
+/* Cartões e blocos principais no modo claro */
+body.modo-claro .destaque,
+body.modo-claro .vantagem,
+body.modo-claro .produto,
+body.modo-claro .topo-produtos,
+body.modo-claro .topo-pedidos,
+body.modo-claro .pedido,
+body.modo-claro .item-carrinho,
+body.modo-claro .sugestoes,
+body.modo-claro .resumo,
+body.modo-claro .carrinho-vazio,
+body.modo-claro .cartao-usuario,
+body.modo-claro .dados-pessoais,
+body.modo-claro .enderecos,
+body.modo-claro .pagamentos,
+body.modo-claro .cartao-cadastro,
+body.modo-claro .perfil-bloqueado {
+  background: #ffffff;
+  color: #0b1033;
+  border-color: rgba(58, 82, 240, 0.22);
+  box-shadow: 0 8px 24px rgba(15, 25, 90, 0.06);
+}
+
+body.modo-claro .destaque h1 span {
+  color: #3a52f0;
+}
+
+body.modo-claro .destaque-texto > p,
+body.modo-claro .vantagem p,
+body.modo-claro .produto p,
+body.modo-claro .titulo-secao p,
+body.modo-claro .topo-produtos-texto p,
+body.modo-claro .topo-pedidos p,
+body.modo-claro .item-dados span,
+body.modo-claro .cartao-cadastro > p,
+body.modo-claro .ja-tenho {
+  color: #3d4675;
+}
+
+body.modo-claro .selo-topo,
+body.modo-claro .etiqueta-categoria,
+body.modo-claro .cafeina,
+body.modo-claro .sugestao,
+body.modo-claro .itens,
+body.modo-claro .endereco,
+body.modo-claro .forma-pagamento,
+body.modo-claro .etapa.pendente,
+body.modo-claro .chips span,
+body.modo-claro .modalidade {
+  background: #f0f3ff;
+  color: #0b1033;
+  border-color: rgba(58, 82, 240, 0.2);
+}
+
+body.modo-claro .modalidade.ativa {
+  background: #3a52f0;
+  color: #ffffff;
+}
+
+body.modo-claro .produto-rodape,
+body.modo-claro .numeros,
+body.modo-claro .valores,
+body.modo-claro .pedido-topo,
+body.modo-claro .dados-topo {
+  border-color: rgba(11, 16, 51, 0.1);
+}
+
+body.modo-claro .rodape {
+  background: #e9edff;
+  border-top-color: rgba(58, 82, 240, 0.2);
+}
+
+body.modo-claro .rodape-coluna > a,
+body.modo-claro .info,
+body.modo-claro .
 
 
 
