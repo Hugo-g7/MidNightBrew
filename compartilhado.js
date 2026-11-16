@@ -76,3 +76,36 @@ function adicionarAoCarrinho(nome, quantidade) {
 }
 
 atualizarContador();
+
+// ---------- MODO ESCURO / CLARO ----------
+(function iniciarTema() {
+  // 1. Verifica se o utilizador já tinha escolhido o modo claro anteriormente
+  if (localStorage.getItem('temaMidnight') === 'claro') {
+    document.body.classList.add('modo-claro');
+  }
+
+  // 2. Cria o botão no menu do cabeçalho automaticamente
+  var menu = document.querySelector('.menu');
+  if (!menu) return;
+
+  var botaoTema = document.createElement('button');
+  botaoTema.type = 'button';
+  botaoTema.className = 'botao-tema';
+  botaoTema.title = 'Alternar modo claro/escuro';
+
+  function atualizarIconeTema() {
+    var claroAtivo = document.body.classList.contains('modo-claro');
+    botaoTema.textContent = claroAtivo ? '🌙' : '☀️';
+  }
+
+  atualizarIconeTema();
+
+  botaoTema.addEventListener('click', function () {
+    document.body.classList.toggle('modo-claro');
+    var claroAtivo = document.body.classList.contains('modo-claro');
+    localStorage.setItem('temaMidnight', claroAtivo ? 'claro' : 'escuro');
+    atualizarIconeTema();
+  });
+
+  menu.appendChild(botaoTema);
+})();
