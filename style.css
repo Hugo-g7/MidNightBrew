@@ -1218,7 +1218,133 @@ body.modo-claro .rodape-coluna > a,
 body.modo-claro .info,
 body.modo-claro .
 
+/* ---------- MODO CLARO / ESCURO DEFINITIVO ---------- */
 
+/* Cores aplicadas quando o modo claro está ativo */
+body.modo-claro {
+  background: #f0f4f8 !important;
+  background-attachment: fixed;
+  color: #111827 !important;
+}
+
+/* Cabeçalho */
+body.modo-claro .cabecalho {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #cbd5e1 !important;
+}
+
+body.modo-claro .logo-texto strong,
+body.modo-claro .menu-link,
+body.modo-claro h1, body.modo-claro h2, body.modo-claro h3 {
+  color: #0f172a !important;
+}
+
+body.modo-claro .menu-link:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.modo-claro .menu-link.ativo {
+  background: #3a52f0 !important;
+  color: #ffffff !important;
+}
+
+/* Blocos, Cartões, Produtos e Secções */
+body.modo-claro .destaque,
+body.modo-claro .vantagem,
+body.modo-claro .produto,
+body.modo-claro .topo-produtos,
+body.modo-claro .topo-pedidos,
+body.modo-claro .pedido,
+body.modo-claro .item-carrinho,
+body.modo-claro .sugestoes,
+body.modo-claro .resumo,
+body.modo-claro .carrinho-vazio,
+body.modo-claro .cartao-usuario,
+body.modo-claro .dados-pessoais,
+body.modo-claro .enderecos,
+body.modo-claro .pagamentos,
+body.modo-claro .cartao-cadastro,
+body.modo-claro .perfil-bloqueado,
+body.modo-claro .cartao-logo {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Textos descritivos e parágrafos */
+body.modo-claro p,
+body.modo-claro span,
+body.modo-claro small,
+body.modo-claro .destaque-texto > p,
+body.modo-claro .vantagem p,
+body.modo-claro .produto p,
+body.modo-claro .titulo-secao p,
+body.modo-claro .topo-produtos-texto p,
+body.modo-claro .topo-pedidos p,
+body.modo-claro .item-dados span,
+body.modo-claro .cartao-cadastro > p,
+body.modo-claro .ja-tenho {
+  color: #475569 !important;
+}
+
+/* Campos de entrada e buscas */
+body.modo-claro input,
+body.modo-claro select,
+body.modo-claro textarea,
+body.modo-claro .busca-topo,
+body.modo-claro .busca-destaque input,
+body.modo-claro .campo-busca,
+body.modo-claro .topo-produtos-filtros select,
+body.modo-claro .campo input,
+body.modo-claro .campos .campo input,
+body.modo-claro .campos .campo select,
+body.modo-claro .linha-cupom input,
+body.modo-claro .campo-observacao,
+body.modo-claro .form-clube input,
+body.modo-claro .modal input {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.modo-claro input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Botões gerais no modo claro */
+body.modo-claro .botao-tema,
+body.modo-claro .botao-escuro,
+body.modo-claro .botao-borda,
+body.modo-claro .categoria,
+body.modo-claro .modalidade {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.modo-claro .categoria.ativa,
+body.modo-claro .modalidade.ativa {
+  background: #3a52f0 !important;
+  color: #ffffff !important;
+}
+
+/* Rodapé */
+body.modo-claro .rodape {
+  background: #e2e8f0 !important;
+  border-top-color: #cbd5e1 !important;
+}
+
+body.modo-claro .rodape-coluna > a,
+body.modo-claro .info,
+body.modo-claro .rodape-baixo {
+  color: #334155 !important;
+}
+
+body.modo-claro .modal {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
 
 
   
